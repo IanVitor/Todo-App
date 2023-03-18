@@ -1,0 +1,153 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background-image: linear-gradient(90deg, #cf9ffc, #7367f0);
+}
+
+main{
+  margin: 100px auto;
+  max-width: 300px;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.653);
+}
+
+.input-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.input-container > input{
+  height: 30px;
+  width: 150px;
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.input-container > button{
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: #7367f0;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.content-container{
+  padding-bottom: 10px;
+  max-height: 30vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.content-container::-webkit-scrollbar-button{
+  width: thin;
+  height: 30px;
+}
+.content-container::-webkit-scrollbar-thumb{
+  background-color: #7367f0;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+.content-container::-webkit-scrollbar{
+  width: 10px;
+  height: 100%;
+}
+
+.content{
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 10px auto;
+  border: 1px solid black;
+}
+
+.title{
+  font-size: 15px;
+  margin-left: 0px;
+  text-transform: capitalize;
+}
+
+.title-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 5px;
+}
+
+.checkbox{
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  border: 1px solid black;
+  cursor: pointer;
+  color: rgb(0, 0, 0, 0);
+}
+
+.button{
+  height: 25px;
+  width: 25px;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+#remove-button{
+  background-color: red;
+}
+
+.text-checked{
+  text-decoration: line-through;
+  color: gray;
+  animation: text-line 0.5s ease;
+}
+
+.button-checked{
+  color: rgb(255, 255, 255);
+  background-color: green;
+  animation: button-check 0.5s ease;
+}
+
+@keyframes button-check{
+  from{
+    background-color: #fdfdfd;
+  }
+  to{
+    background-color: green;
+  }
+}
+
+@keyframes text-line{
+  from{
+    text-decoration: none;
+    color: black;
+  }
+  to{
+    color: gray;
+    text-decoration: line-through;
+  }
+}
